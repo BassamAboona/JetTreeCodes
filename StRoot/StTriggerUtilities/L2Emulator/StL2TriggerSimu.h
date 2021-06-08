@@ -1,5 +1,5 @@
 //
-// $Id: StL2TriggerSimu.h,v 0.01
+//  StL2TriggerSimu.h,v 0.01
 // very light intervace from L2Emulator to StTriggerSimuMaker
 //
 #ifndef STAR_StL2TriggerSimu

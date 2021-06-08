@@ -1,5 +1,5 @@
 //
-// $Id: StEemcTriggerSimu.cxx,v 0.01
+//  StEemcTriggerSimu.cxx,v 0.01
 //
 /*
   changes to be done in bbc-code, Jan

@@ -13,6 +13,7 @@
 #include "TRef.h"
 #include "TLorentzVector.h"
 #include "TDatime.h"
+#include "TTimeStamp.h"
 
 class StPythiaEvent;
 
@@ -353,10 +354,11 @@ class StJetSkimEvent : public TObject {
                 // Start: bassam
                 short nTzero() const { return mNTzero; }
                 short nTzeroCan() const { return mNTzeroCan; }
+		float tStart() const {return mVpdTstart;}
                 double tCanFirst() const { return mTCanFirst; }
                 double tCanLast() const { return mTCanLast; }
-                int nVpdEGoodHits() const { return mNVpdEGoodHits; }
-                int nVpdWGoodHits() const { return mNVpdWGoodHits; }
+                int vpdEGoodHits() const { return mNVpdEGoodHits; }
+                int vpdWGoodHits() const { return mNVpdWGoodHits; }
                 double earliestVpdEHit() const { return mEarliestVpdEHit; }
                 double earliestVpdWHit() const { return mEarliestVpdWHit; }
                 double closestVpdEHit() const { return mClosestVpdEHit; }
@@ -437,7 +439,9 @@ class StJetSkimEvent : public TObject {
 		int hour  () const { return mDatime.GetHour  (); }
 		int minute() const { return mDatime.GetMinute(); }
 		int second() const { return mDatime.GetSecond(); }
-		unsigned int unixTime() const { return mDatime.Convert(); }
+                // unsigned int unixTime() const { return mDatime.Convert(); }
+                time_t unixTime() const { TTimeStamp stamp(mDatime.GetYear(), mDatime.GetMonth(), mDatime.GetDay(), mDatime.GetHour(), mDatime.GetMinute(), mDatime.GetSecond()); return stamp.GetSec(); }               
+
 		void setDateTime(const TDatime& datime) { mDatime = datime; }
 
 	private:

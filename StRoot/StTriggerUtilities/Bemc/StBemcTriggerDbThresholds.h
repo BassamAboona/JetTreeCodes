@@ -1,5 +1,5 @@
 //
-// $Id: StBemcTriggerDbThresholds.h,v 0.01
+//  StBemcTriggerDbThresholds.h,v 0.01
 //
 #ifndef STAR_StBemcTriggerDbThresholds
 #define STAR_StBemcTriggerDbThresholds

@@ -111,7 +111,6 @@ int StJetMaker2012::Make()
       // Start: bassam
       int totNumVertices = 0; // store the total number of available vertices
 
-      cout << "**&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&**&*&*&*&*&*&*&*&**&*& mStoreOnlyDefaultVertex: " << mStoreOnlyDefaultVertex << endl;
       if(mStoreOnlyDefaultVertex && tpc.numberOfVertices()!=0) {
           totNumVertices = 1;
       }
@@ -119,8 +118,6 @@ int StJetMaker2012::Make()
           totNumVertices = tpc.numberOfVertices();
       }
       // End: bassam
-
-cout << "**&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&**&*&*&*&*&*&*&*&**&*& totNumVertices: " <<totNumVertices<< endl;
 
       // Vertex loop
       for (int iVertex = 0; iVertex < totNumVertices; ++iVertex) {

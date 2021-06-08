@@ -1,5 +1,5 @@
 // -*- mode: c++ -*-
-// $Id: StEemcTriggerSimu.h,v 0.01
+//  StEemcTriggerSimu.h,v 0.01
 //
 #ifndef STAR_StEemcTriggerSimu
 #define STAR_StEemcTriggerSimu
